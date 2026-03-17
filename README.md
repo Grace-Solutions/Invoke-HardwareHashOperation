@@ -6,6 +6,8 @@ A PowerShell solution for extracting Windows Autopilot hardware hashes and expor
 
 ## Table of Contents
 
+- [The Problem](#the-problem)
+- [How This Solves It](#how-this-solves-it)
 - [Overview](#overview)
 - [Requirements](#requirements)
 - [Required Tools](#required-tools)
@@ -17,6 +19,51 @@ A PowerShell solution for extracting Windows Autopilot hardware hashes and expor
 - [Deployment Scenarios](#deployment-scenarios)
 - [Log Locations](#log-locations)
 - [Troubleshooting](#troubleshooting)
+
+---
+
+## The Problem
+
+Getting a Windows device enrolled in Intune and associated with an Autopilot profile should be simple. In practice, it isn't.
+
+Microsoft provides no flexible, out-of-the-box tooling for hardware hash extraction and upload at scale. The process they document asks IT teams to:
+
+1. **Manually extract** the hardware hash from each device — typically by running a PowerShell script or `OA3Tool.exe` on a booted machine and collecting the output.
+2. **Manually upload** the resulting CSV to the Intune portal (one file at a time, per device or per batch).
+3. **Manually assign** an Autopilot deployment profile to each imported device, or wait for dynamic group membership to eventually resolve.
+
+For a single device, this is tedious. For hundreds of devices during a new site rollout, an annual hardware refresh, or a break-fix rotation, it becomes a serious operational bottleneck. IT administrators end up:
+
+- Walking to each machine (or booting from USB), running a script, and copying a CSV off to a file share.
+- Logging into the Intune portal, navigating to Autopilot device import, uploading the CSV, and waiting for processing.
+- Verifying each device received the correct profile and group tag — and fixing the ones that didn't.
+- Repeating the entire process when something goes wrong or a device is reimaged.
+
+There is no native way to go from "hash extracted on a device" to "device registered in Autopilot" without manual portal interaction or writing your own Microsoft Graph integration from scratch.
+
+---
+
+## How This Solves It
+
+`Invoke-HardwareHashOperation` eliminates the manual steps by handling everything from hash extraction to delivery in a single, automatable operation.
+
+**On the device side**, the script:
+- Extracts the hardware hash using `OA3Tool.exe`, decodes it, and builds a standards-compliant Autopilot CSV — all in one execution.
+- Exports the CSV locally, to USB, or both — no manual file handling required.
+- Optionally sends the full device payload (hardware hash, serial number, system information, TPM data) as structured JSON to a **webhook endpoint**.
+
+**On the automation side**, the webhook capability is where the real value lies. Instead of uploading CSVs to the Intune portal, you point the script at a workflow automation platform — **[Zapier](https://zapier.com)**, **[n8n](https://n8n.io)**, **[ActivePieces](https://www.activepieces.com)**, or any system that can receive an HTTP POST — and let the workflow handle the rest:
+
+```
+Device boots → Script runs → Webhook fires → Workflow receives payload
+    → Stores hash in a database via REST API
+    → Imports device into Autopilot via Microsoft Graph
+    → Assigns profile and group tag automatically
+```
+
+This completely removes the Intune portal from the equation. The device is registered, tagged, and profile-assigned without a human ever opening a browser. The workflow can also log the event, notify a Slack/Teams channel, update an asset management system, or trigger any other downstream action.
+
+**The result:** What used to be a multi-step, per-device manual process becomes a single script execution that triggers a fully automated pipeline — whether you're imaging one laptop at a bench or deploying a fleet from a warehouse.
 
 ---
 
