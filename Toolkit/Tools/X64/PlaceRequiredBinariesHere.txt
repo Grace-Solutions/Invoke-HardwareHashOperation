@@ -1,0 +1,12 @@
+Place the following required binaries in this folder before running the script:
+
+  oa3tool.exe  — Obtain from the Windows ADK (Deployment Tools feature)
+                 Download: https://learn.microsoft.com/en-us/windows-hardware/get-started/adk-install
+                 ADK path:  C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools\amd64\Licensing\OA3\oa3tool.exe
+
+  PCPKsp.dll   — Only required for WinPE environments that do NOT include the WinPE-SecureStartup optional component.
+                 Copy from any Windows 10/11 x64 system: C:\Windows\System32\PCPKsp.dll
+                 On full Windows installs and WinPE images with WinPE-SecureStartup, the script finds this file automatically.
+
+See README.md for full setup instructions.
+

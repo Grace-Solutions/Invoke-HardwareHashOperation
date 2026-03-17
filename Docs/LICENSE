@@ -1,0 +1,66 @@
+MIT License
+
+Copyright (c) 2025 Invoke-HardwareHashOperation Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+THIRD-PARTY COMPONENTS
+
+This software includes the following third-party components:
+
+1. OA3Tool.exe
+   - Copyright: Microsoft Corporation
+   - Purpose: Hardware hash extraction utility
+   - License: Distributed as part of Windows OEM Activation 3.0 tools
+   - Note: Usage subject to Microsoft licensing terms
+
+2. PCPKsp.dll
+   - Copyright: Microsoft Corporation
+   - Purpose: Platform Crypto Provider Key Storage Provider
+   - License: Part of Windows operating system components
+   - Note: Usage subject to Microsoft licensing terms
+
+---
+
+DISCLAIMER
+
+This software is provided for use in Windows Autopilot deployment scenarios.
+Users are responsible for ensuring compliance with all applicable Microsoft
+licensing terms and organizational policies.
+
+The authors and contributors of this software are not responsible for any
+misuse or any damages arising from the use of this software.
+
+---
+
+ATTRIBUTION
+
+If you use this software in your organization or project, attribution is
+appreciated but not required. You may include a reference to the original
+project repository.
+
+---
+
+CONTRIBUTIONS
+
+By contributing to this project, you agree that your contributions will be
+licensed under the same MIT License that covers the project.
+

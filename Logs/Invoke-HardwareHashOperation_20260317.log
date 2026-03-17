@@ -1,0 +1,360 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260317144255
+Username: YOURPC\SampleUser
+RunAs User: YOURPC\SampleUser
+Configuration Name:
+Machine: YOURPC (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\windows\System32\WindowsPowershell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoExit -NoLogo -NoProfile -WindowStyle Normal -Command & {Set-Location -Path 'C:\Tools\Invoke-HardwareHashOperation'}
+Process ID: 14224
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+VERBOSE: [2026/03/17 18:42:55.51] - [INFO] - Execution of script "Invoke-HardwareHashOperation.ps1" began on Tuesday, March 17, 2026 @ 06:40:49.058 PM
+VERBOSE: [2026/03/17 18:42:55.517] - [INFO] - Script Path = C:\Tools\Invoke-HardwareHashOperation\Invoke-HardwareHashOperation.ps1
+VERBOSE: [2026/03/17 18:42:55.517] - [INFO] - Script Log Path = C:\windows\Logs\Software\Invoke-HardwareHashOperation\Invoke-HardwareHashOperation_20260317.log
+VERBOSE: [2026/03/17 18:42:55.517] - [INFO] - Script Version = 2026.3.17.1803
+VERBOSE: [2026/03/17 18:42:55.851] - [INFO] - Available Script Parameter(s): -Export:SwitchParameter, -ExportPath:FileInfo, -ExportToRemovableDisk:SwitchParameter, -Overwrite:SwitchParameter, -SendWebhook:SwitchParameter, -WebhookURI:Uri, -WebhookHeaders:String, -ExcludeSystemInformation:SwitchParameter, -LogDirectory:DirectoryInfo, -ContinueOnError:SwitchParameter
+VERBOSE: [2026/03/17 18:42:55.851] - [INFO] - Supplied Script Parameter(s):
+VERBOSE: [2026/03/17 18:42:55.851] - [INFO] - 0 bound script parameter(s) were specified.
+VERBOSE: [2026/03/17 18:42:55.851] - [INFO] - 0 unbound script arguments were specified.
+VERBOSE: [2026/03/17 18:42:55.851] - [INFO] - Process Command Line: "C:\windows\System32\WindowsPowershell\v1.0\powershell.exe" -ExecutionPolicy Bypass -NoExit -NoLogo -NoProfile -WindowStyle Normal -Command "& {Set-Location -Path 'C:\Tools\Invoke-HardwareHashOperation'}"
+VERBOSE: [2026/03/17 18:42:55.866] - [INFO] - Process Working Directory: C:\windows\System32\WindowsPowershell\v1.0
+VERBOSE: [2026/03/17 18:42:55.872] - [INFO] - Process ID: 14224
+VERBOSE: [2026/03/17 18:42:55.874] - [INFO] - Process is 64-Bit: True
+VERBOSE: [2026/03/17 18:42:55.88] - [INFO] - Script Parameter Set Name: __AllParameterSets
+VERBOSE: [2026/03/17 18:42:55.883] - [INFO] - Attempting to load all required functions, modules, libraries, and variables from the toolkit. Please Wait...
+VERBOSE: [2026/03/17 18:42:55.883] - [INFO] - Toolkit Script Path: C:\Tools\Invoke-HardwareHashOperation\Toolkit\Toolkit.ps1
+VERBOSE: [2026/03/17 18:42:55.883] - [INFO] - Toolkit Script Version: 2026.3.17.1803
+VERBOSE: [2026/03/17 18:42:55.891] - [INFO] - Powershell Version: 5.1.26100.7920
+VERBOSE: [2026/03/17 18:42:55.916] - [INFO] - Operating System ProductName: Windows 11 Enterprise
+VERBOSE: [2026/03/17 18:42:55.925] - [INFO] - Operating System Version: 10.0.26200.8037
+VERBOSE: [2026/03/17 18:42:55.927] - [INFO] - Operating System Architecture: 64-bit
+VERBOSE: [2026/03/17 18:42:55.93] - [INFO] - Operating System ReleaseVersion: 2009
+VERBOSE: [2026/03/17 18:42:55.93] - [INFO] - Operating System ReleaseID: 25H2
+VERBOSE: [2026/03/17 18:42:55.963] - [INFO] - Attempting to display device information properties from the "MS_SystemInformation" WMI class located within the "root/WMI" WMI namespace. Please Wait...
+VERBOSE: [2026/03/17 18:42:55.969] - [INFO] - BaseBoardManufacturer = Contoso Inc.
+VERBOSE: [2026/03/17 18:42:55.971] - [INFO] - BaseBoardProduct = 0XXXXX
+VERBOSE: [2026/03/17 18:42:55.974] - [INFO] - BaseBoardVersion = A00
+VERBOSE: [2026/03/17 18:42:55.974] - [INFO] - BIOSReleaseDate = 12/04/2025
+VERBOSE: [2026/03/17 18:42:55.978] - [INFO] - BIOSVendor = Contoso Inc.
+VERBOSE: [2026/03/17 18:42:55.978] - [INFO] - BIOSVersion = 1.48.0
+VERBOSE: [2026/03/17 18:42:55.978] - [INFO] - SystemFamily = SampleFamily
+VERBOSE: [2026/03/17 18:42:55.978] - [INFO] - SystemManufacturer = Contoso Inc.
+VERBOSE: [2026/03/17 18:42:55.991] - [INFO] - SystemProductName = SampleModel 5520
+VERBOSE: [2026/03/17 18:42:56.001] - [INFO] - SystemSKU = 0000
+VERBOSE: [2026/03/17 18:42:56.009] - [INFO] - There are 0 log file(s) requiring cleanup.
+VERBOSE: [2026/03/17 18:42:56.034] - [INFO] - Attempting to dot source the functions contained within the dependency script 1 of 2. Please Wait... [Path: "C:\Tools\Invoke-HardwareHashOperation\Toolkit\Functions\Invoke-Webhook.ps1"]
+VERBOSE: [2026/03/17 18:42:56.303] - [INFO] - Attempting to dot source the functions contained within the dependency script 2 of 2. Please Wait... [Path: "C:\Tools\Invoke-HardwareHashOperation\Toolkit\Functions\Start-ProcessWithOutput.ps1"]
+VERBOSE: [2026/03/17 18:42:56.571] - [INFO] - All required functions, modules, libraries, and variables have been loaded from the toolkit successfully.
+VERBOSE: [2026/03/17 18:42:56.61] - [INFO] - Attempting to pause script execution for 2. Please Wait...
+VERBOSE: [2026/03/17 18:42:58.627] - [INFO] - Function 'Start-ProcessWithOutput' is beginning. Please Wait...
+VERBOSE: [2026/03/17 18:42:58.627] - [INFO] - Supplied Function Parameter(s) = -FilePath:String, -WorkingDirectory:DirectoryInfo, -ArgumentList:String[], -AcceptableExitCodeList:String[], -CreateNoWindow:SwitchParameter, -ExecutionTimeout:TimeSpan, -ExecutionTimeoutInterval:TimeSpan, -LogOutput:SwitchParameter, -ContinueOnError:SwitchParameter, -Verbose:SwitchParameter
+VERBOSE: [2026/03/17 18:42:58.643] - [INFO] - Execution of Start-ProcessWithOutput began on Tuesday, March 17, 2026 @ 02:42:58.627 PM
+VERBOSE: [2026/03/17 18:42:58.643] - [INFO] - Parameter Set Name: CreateNoWindow
+VERBOSE: [2026/03/17 18:42:58.643] - [INFO] - Attempting to create the non-existing process working directory. Please Wait...
+VERBOSE: [2026/03/17 18:42:58.643] - [INFO] - Path: C:\Users\SampleUser\AppData\Local\Temp\Invoke-HardwareHashOperation\OA3Results
+VERBOSE: [2026/03/17 18:42:58.659] - [INFO] - Attempting to execute the following command: C:\Tools\Invoke-HardwareHashOperation\Toolkit\Tools\X64\oa3tool.exe /Report /ConfigFile="C:\Tools\Invoke-HardwareHashOperation\Toolkit\Tools\X64\OA3.cfg" /NoKeyCheck
+VERBOSE: [2026/03/17 18:42:58.659] - [INFO] - Acceptable Exit Code List: 0
+VERBOSE: [2026/03/17 18:42:58.946] - [INFO] - [ProcessName: ] [ID: 2856] [Version: 10.0.26100.2454 (WinBuild.160101.0800)] [Description: Windows OEM Activation Tool 3.0] [Path: C:\Tools\Invoke-HardwareHashOperation\Toolkit\Tools\X64\oa3tool.exe]
+VERBOSE: [2026/03/17 18:42:58.954] - [INFO] - Process Start Time: Tuesday, March 17, 2026 @ 02:42:58.843 PM
+VERBOSE: [2026/03/17 18:42:58.962] - [INFO] - Process Timeout Time: Tuesday, March 17, 2026 @ 02:43:28.843 PM
+VERBOSE: [2026/03/17 18:42:58.962] - [INFO] - Process Timeout Duration: 30 seconds
+VERBOSE: [2026/03/17 18:42:58.978] - [INFO] - Process ID 2856 has been running for 315 milliseconds.
+VERBOSE: [2026/03/17 18:42:58.978] - [INFO] - Process ID 2856 has not exceeded the maximum timeout duration of 30 seconds.
+VERBOSE: [2026/03/17 18:42:58.978] - [INFO] - Checking again in another 5 seconds. Please Wait...
+VERBOSE: [2026/03/17 18:43:10.624] - [INFO] - Process Exit Time: Tuesday, March 17, 2026 @ 02:42:59.513 PM
+VERBOSE: [2026/03/17 18:43:10.624] - [INFO] - The command execution took 669 milliseconds.
+VERBOSE: [2026/03/17 18:43:10.624] - [INFO] - The command execution was successful. [ExitCode: 0] [ExitCodeAsDecimal: 0] [ExitCodeAsHex: 0x00000000] [ExitCodeAsInteger: 0]
+VERBOSE: [2026/03/17 18:43:10.624] - [INFO] - StandardOutput: OEM Activation Tool 3.0
+
+(c) Copyright 2023 Microsoft Corp.
+
+
+Version: 10.0.26100.2454 
+
+    The OEM Activation Tool 3.0 successfully completed its required processes.
+VERBOSE: [2026/03/17 18:43:10.624] - [INFO] - StandardError: N/A
+VERBOSE: [2026/03/17 18:43:10.642] - [INFO] - Execution of Start-ProcessWithOutput ended on Tuesday, March 17, 2026 @ 02:43:10.642 PM
+VERBOSE: [2026/03/17 18:43:10.642] - [INFO] - Function execution took 12 seconds, and 14 milliseconds.
+VERBOSE: [2026/03/17 18:43:10.642] - [INFO] - Function 'Start-ProcessWithOutput' is completed.
+VERBOSE: [2026/03/17 18:43:10.642] - [INFO] - Attempting to pause script execution for 2. Please Wait...
+VERBOSE: [2026/03/17 18:43:12.665] - [INFO] - Hardware Hash Exists: True
+VERBOSE: [2026/03/17 18:43:12.677] - [INFO] - Hardware Hash: AFakeHashHere
+VERBOSE: [2026/03/17 18:43:12.677] - [INFO] - Attempting to decode hardware hash. Please Wait...
+VERBOSE: [2026/03/17 18:43:12.692] - [INFO] - Function 'Start-ProcessWithOutput' is beginning. Please Wait...
+VERBOSE: [2026/03/17 18:43:12.692] - [INFO] - Supplied Function Parameter(s) = -FilePath:String, -WorkingDirectory:DirectoryInfo, -ArgumentList:String[], -AcceptableExitCodeList:String[], -CreateNoWindow:SwitchParameter, -ExecutionTimeout:TimeSpan, -ExecutionTimeoutInterval:TimeSpan, -LogOutput:SwitchParameter, -ContinueOnError:SwitchParameter, -Verbose:SwitchParameter
+VERBOSE: [2026/03/17 18:43:12.692] - [INFO] - Execution of Start-ProcessWithOutput began on Tuesday, March 17, 2026 @ 02:43:12.692 PM
+VERBOSE: [2026/03/17 18:43:12.702] - [INFO] - Parameter Set Name: CreateNoWindow
+VERBOSE: [2026/03/17 18:43:12.702] - [INFO] - Attempting to execute the following command: C:\Tools\Invoke-HardwareHashOperation\Toolkit\Tools\X64\oa3tool.exe /decodehwhash:"AFakeHashHere"
+VERBOSE: [2026/03/17 18:43:12.708] - [INFO] - Acceptable Exit Code List: 0
+VERBOSE: [2026/03/17 18:43:12.94] - [INFO] - [ProcessName: ] [ID: 31864] [Version: ] [Description: ] [Path: C:\windows\SYSTEM32\ntdll.dll]
+VERBOSE: [2026/03/17 18:43:12.946] - [INFO] - Process Start Time: Tuesday, March 17, 2026 @ 02:43:12.887 PM
+VERBOSE: [2026/03/17 18:43:12.96] - [INFO] - Process Timeout Time: Tuesday, March 17, 2026 @ 02:43:42.887 PM
+VERBOSE: [2026/03/17 18:43:12.974] - [INFO] - Process Timeout Duration: 30 seconds
+VERBOSE: [2026/03/17 18:43:12.985] - [INFO] - Process ID 31864 has been running for 269 milliseconds.
+VERBOSE: [2026/03/17 18:43:12.993] - [INFO] - Process ID 31864 has not exceeded the maximum timeout duration of 30 seconds.
+VERBOSE: [2026/03/17 18:43:12.993] - [INFO] - Checking again in another 5 seconds. Please Wait...
+VERBOSE: [2026/03/17 18:43:24.673] - [INFO] - Process Exit Time: Tuesday, March 17, 2026 @ 02:43:13.067 PM
+VERBOSE: [2026/03/17 18:43:24.676] - [INFO] - The command execution took 180 milliseconds.
+VERBOSE: [2026/03/17 18:43:24.686] - [INFO] - The command execution was successful. [ExitCode: 0] [ExitCodeAsDecimal: 0] [ExitCodeAsHex: 0x00000000] [ExitCodeAsInteger: 0]
+VERBOSE: [2026/03/17 18:43:24.686] - [INFO] - StandardOutput: OEM Activation Tool 3.0
+
+(c) Copyright 2023 Microsoft Corp.
+
+
+Version: 10.0.26100.2454 
+
+Decoded Hardware Hash:
+<?xml version="1.0"?>
+
+<HardwareReport>
+
+	<HardwareInventory>
+
+		<p n="ProductKeyID" v="0000000000000" />
+
+		<p n="ProductKeyPkPn" v="[TH]X00-00000" />
+
+		<p n="ToolVersion" v="9" />
+
+		<p n="HardwareInventoryVersion" v="131" />
+
+		<p n="ToolBuild" v="10.0.26100.2454" />
+
+		<p n="OSType" v="FullOS" />
+
+		<p n="OsCpuArchitecture" v="x64" />
+
+		<p n="OsBuild" v="10.0.26200.8037" />
+
+		<p n="OsSystemTime" v="2026-03-17T18:42:59Z" />
+
+		<p n="OsLocalTime" v="2026-03-17T14:42:59-04:00" />
+
+		<p n="ProcessorModel" v="SampleProcessor @ 2.60GHz" />
+
+		<p n="ProcessorPackages" v="1" />
+
+		<p n="ProcessorCores" v="4" />
+
+		<p n="ProcessorThreads" v="8" />
+
+		<p n="ProcessorHyperThreading" v="true" />
+
+		<p n="SmbiosRamArrayCount" v="1" />
+
+		<p n="SmbiosRamSlots" v="2" />
+
+		<p n="SmbiosRamErrorCorrection" v="None" />
+
+		<p n="SmbiosRamMaximumCapacity" v="256" />
+
+		<p n="TotalPhysicalRAM" v="32" />
+
+		<p n="SmbiosFirmwareVendor" v="Contoso Inc." />
+
+		<p n="SmbiosSystemManufacturer" v="Contoso Inc." />
+
+		<p n="SmbiosSystemProductName" v="SampleModel 5520" />
+
+		<p n="SmbiosSystemSerialNumber" v="ABC1234" />
+
+		<p n="SmbiosUuid" v="00000000-0000-0000-0000-000000000000" />
+
+		<p n="SmbiosSkuNumber" v="0000" />
+
+		<p n="SmbiosSystemFamily" v="SampleFamily" />
+
+		<p n="SmbiosSystemVersion" v="SMBIOS_STRING_INDEX_0" />
+
+		<p n="SmbiosBoardManufacturer" v="Contoso Inc." />
+
+		<p n="SmbiosBoardProduct" v="0XXXXX" />
+
+		<p n="SmbiosBoardVersion" v="A00" />
+
+		<p n="ChassisType" v="0x0A" />
+
+		<p n="Disk1.DiskCapacity" v="1000" />
+
+		<p n="Disk1.DiskType" v="NVMe" />
+
+		<p n="Disk1.StorageBusType" v="NVMe" />
+
+		<p n="Disk1.IncursSeekPenalty" v="0" />
+
+		<p n="Disk1.TrimEnabled" v="1" />
+
+		<p n="Disk1.DiskSerialNumber" v="0000_0000_0000_0000.|FAKEDISK1 1TB|" />
+
+		<p n="Disk2.DiskCapacity" v="500" />
+
+		<p n="Disk2.DiskType" v="NVMe" />
+
+		<p n="Disk2.StorageBusType" v="NVMe" />
+
+		<p n="Disk2.IncursSeekPenalty" v="0" />
+
+		<p n="Disk2.TrimEnabled" v="1" />
+
+		<p n="Disk2.DiskSerialNumber" v="0000_0000_0000_0000_0000_0000_0000_0000.|FAKEDISK2 500GB|" />
+
+		<p n="InternalDiskCount" v="2" />
+
+		<p n="TotalDiskCapacity" v="1500" />
+
+		<p n="PhysicalMedium" v="802_3" />
+
+		<p n="MacAddress" v="00:11:22:33:44:55" />
+
+		<p n="PhysicalMedium" v="Native802_11" />
+
+		<p n="MacAddress" v="00:11:22:33:44:66" />
+
+		<p n="PhysicalMedium" v="Bluetooth" />
+
+		<p n="MacAddress" v="00:11:22:33:44:77" />
+
+		<p n="DigitizerSupportID" v="IntegratedTouch, MultiInput" />
+
+		<p n="PowerPlatformRole" v="Mobile" />
+
+		<p n="GpuCount" v="1" />
+
+		<p n="Gpu1.DedicatedVideoMemory" v="134217728" />
+
+		<p n="Gpu1.DedicatedSystemMemory" v="0" />
+
+		<p n="Gpu1.RemovalPolicy" v="NoRemoval" />
+
+		<p n="Gpu1.InLocalMachineContainer" v="true" />
+
+		<p n="Gpu1.Manufacturer" v="Sample Corporation" />
+
+		<p n="Gpu1.Model" v="Sample Integrated Graphics" />
+
+		<p n="TPMVersion" v="TPM-Version:2.0 -Level:0-Revision:1.38-VendorID:&apos;STM &apos;-Firmware:65794.0" />
+
+		<p n="TPM EkPub" v="AFakeTPMEkPubHere==" />
+
+		<p n="Status" v="0x00000000" />
+
+		<p n="OfflineDeviceIdType" v="TPM_EK" />
+
+		<p n="OfflineDeviceId" v="AFakeOfflineDeviceIdHere=" />
+
+		<p n="DiskSSNKernel" v="0000_0000_0000_0000_0000_0000_0000_0000.|FAKEDISK2 500GB|" />
+
+		<p n="OSDefaultLanguage" v="en-US" />
+
+		<p n="DefaultSystemLocale" v="en-US" />
+
+		<p n="OSDefaultTimeZone" v="Eastern Standard Time" />
+
+		<p n="OSInstalledLanguagePacks" v="en-US" />
+
+		<p n="KeyboardCode" v="0409:00000409" />
+
+		<p n="SppHwid" v="AFakeSppHwidHere=" />
+
+	</HardwareInventory>
+
+</HardwareReport>
+
+
+    The OEM Activation Tool 3.0 successfully completed its required processes.
+VERBOSE: [2026/03/17 18:43:24.748] - [INFO] - StandardError: N/A
+VERBOSE: [2026/03/17 18:43:24.748] - [INFO] - Execution of Start-ProcessWithOutput ended on Tuesday, March 17, 2026 @ 02:43:24.748 PM
+VERBOSE: [2026/03/17 18:43:24.764] - [INFO] - Function execution took 12 seconds, and 56 milliseconds.
+VERBOSE: [2026/03/17 18:43:24.764] - [INFO] - Function 'Start-ProcessWithOutput' is completed.
+VERBOSE: [2026/03/17 18:43:24.829] - [INFO] - Found 73 decoded hardware hash properties.
+VERBOSE: [2026/03/17 18:43:24.844] - [INFO] - ProductKeyID: 0000000000000
+VERBOSE: [2026/03/17 18:43:24.844] - [INFO] - ProductKeyPkPn: [TH]X00-00000
+VERBOSE: [2026/03/17 18:43:24.844] - [INFO] - ToolVersion: 9
+VERBOSE: [2026/03/17 18:43:24.861] - [INFO] - HardwareInventoryVersion: 131
+VERBOSE: [2026/03/17 18:43:24.861] - [INFO] - ToolBuild: 10.0.26100.2454
+VERBOSE: [2026/03/17 18:43:24.861] - [INFO] - OSType: FullOS
+VERBOSE: [2026/03/17 18:43:24.872] - [INFO] - OsCpuArchitecture: x64
+VERBOSE: [2026/03/17 18:43:24.876] - [INFO] - OsBuild: 10.0.26200.8037
+VERBOSE: [2026/03/17 18:43:24.876] - [INFO] - OsSystemTime: 2026-03-17T18:42:59Z
+VERBOSE: [2026/03/17 18:43:24.876] - [INFO] - OsLocalTime: 2026-03-17T14:42:59-04:00
+VERBOSE: [2026/03/17 18:43:24.892] - [INFO] - ProcessorModel: SampleProcessor @ 2.60GHz
+VERBOSE: [2026/03/17 18:43:24.898] - [INFO] - ProcessorPackages: 1
+VERBOSE: [2026/03/17 18:43:24.898] - [INFO] - ProcessorCores: 4
+VERBOSE: [2026/03/17 18:43:24.898] - [INFO] - ProcessorThreads: 8
+VERBOSE: [2026/03/17 18:43:24.908] - [INFO] - ProcessorHyperThreading: true
+VERBOSE: [2026/03/17 18:43:24.908] - [INFO] - SmbiosRamArrayCount: 1
+VERBOSE: [2026/03/17 18:43:24.924] - [INFO] - SmbiosRamSlots: 2
+VERBOSE: [2026/03/17 18:43:24.924] - [INFO] - SmbiosRamErrorCorrection: None
+VERBOSE: [2026/03/17 18:43:24.924] - [INFO] - SmbiosRamMaximumCapacity: 256
+VERBOSE: [2026/03/17 18:43:24.939] - [INFO] - TotalPhysicalRAM: 32
+VERBOSE: [2026/03/17 18:43:24.939] - [INFO] - SmbiosFirmwareVendor: Contoso Inc.
+VERBOSE: [2026/03/17 18:43:24.955] - [INFO] - SmbiosSystemManufacturer: Contoso Inc.
+VERBOSE: [2026/03/17 18:43:24.955] - [INFO] - SmbiosSystemProductName: SampleModel 5520
+VERBOSE: [2026/03/17 18:43:24.972] - [INFO] - SmbiosSystemSerialNumber: ABC1234
+VERBOSE: [2026/03/17 18:43:24.972] - [INFO] - SmbiosUuid: 00000000-0000-0000-0000-000000000000
+VERBOSE: [2026/03/17 18:43:24.972] - [INFO] - SmbiosSkuNumber: 0000
+VERBOSE: [2026/03/17 18:43:24.989] - [INFO] - SmbiosSystemFamily: SampleFamily
+VERBOSE: [2026/03/17 18:43:24.989] - [INFO] - SmbiosSystemVersion: SMBIOS_STRING_INDEX_0
+VERBOSE: [2026/03/17 18:43:24.997] - [INFO] - SmbiosBoardManufacturer: Contoso Inc.
+VERBOSE: [2026/03/17 18:43:25.003] - [INFO] - SmbiosBoardProduct: 0XXXXX
+VERBOSE: [2026/03/17 18:43:25.003] - [INFO] - SmbiosBoardVersion: A00
+VERBOSE: [2026/03/17 18:43:25.003] - [INFO] - ChassisType: 0x0A
+VERBOSE: [2026/03/17 18:43:25.023] - [INFO] - Disk1.DiskCapacity: 1000
+VERBOSE: [2026/03/17 18:43:25.025] - [INFO] - Disk1.DiskType: NVMe
+VERBOSE: [2026/03/17 18:43:25.025] - [INFO] - Disk1.StorageBusType: NVMe
+VERBOSE: [2026/03/17 18:43:25.025] - [INFO] - Disk1.IncursSeekPenalty: 0
+VERBOSE: [2026/03/17 18:43:25.039] - [INFO] - Disk1.TrimEnabled: 1
+VERBOSE: [2026/03/17 18:43:25.039] - [INFO] - Disk1.DiskSerialNumber: 0000_0000_0000_0000.|FAKEDISK1 1TB|
+VERBOSE: [2026/03/17 18:43:25.039] - [INFO] - Disk2.DiskCapacity: 500
+VERBOSE: [2026/03/17 18:43:25.051] - [INFO] - Disk2.DiskType: NVMe
+VERBOSE: [2026/03/17 18:43:25.057] - [INFO] - Disk2.StorageBusType: NVMe
+VERBOSE: [2026/03/17 18:43:25.058] - [INFO] - Disk2.IncursSeekPenalty: 0
+VERBOSE: [2026/03/17 18:43:25.058] - [INFO] - Disk2.TrimEnabled: 1
+VERBOSE: [2026/03/17 18:43:25.069] - [INFO] - Disk2.DiskSerialNumber: 0000_0000_0000_0000_0000_0000_0000_0000.|FAKEDISK2 500GB|
+VERBOSE: [2026/03/17 18:43:25.069] - [INFO] - InternalDiskCount: 2
+VERBOSE: [2026/03/17 18:43:25.075] - [INFO] - TotalDiskCapacity: 1500
+VERBOSE: [2026/03/17 18:43:25.075] - [INFO] - PhysicalMedium: 802_3
+VERBOSE: [2026/03/17 18:43:25.083] - [INFO] - MacAddress: 00:11:22:33:44:55
+VERBOSE: [2026/03/17 18:43:25.083] - [INFO] - PhysicalMedium: Native802_11
+VERBOSE: [2026/03/17 18:43:25.091] - [INFO] - MacAddress: 00:11:22:33:44:66
+VERBOSE: [2026/03/17 18:43:25.091] - [INFO] - PhysicalMedium: Bluetooth
+VERBOSE: [2026/03/17 18:43:25.099] - [INFO] - MacAddress: 00:11:22:33:44:77
+VERBOSE: [2026/03/17 18:43:25.106] - [INFO] - DigitizerSupportID: IntegratedTouch, MultiInput
+VERBOSE: [2026/03/17 18:43:25.106] - [INFO] - PowerPlatformRole: Mobile
+VERBOSE: [2026/03/17 18:43:25.115] - [INFO] - GpuCount: 1
+VERBOSE: [2026/03/17 18:43:25.115] - [INFO] - Gpu1.DedicatedVideoMemory: 134217728
+VERBOSE: [2026/03/17 18:43:25.131] - [INFO] - Gpu1.DedicatedSystemMemory: 0
+VERBOSE: [2026/03/17 18:43:25.131] - [INFO] - Gpu1.RemovalPolicy: NoRemoval
+VERBOSE: [2026/03/17 18:43:25.131] - [INFO] - Gpu1.InLocalMachineContainer: true
+VERBOSE: [2026/03/17 18:43:25.146] - [INFO] - Gpu1.Manufacturer: Sample Corporation
+VERBOSE: [2026/03/17 18:43:25.146] - [INFO] - Gpu1.Model: Sample Integrated Graphics
+VERBOSE: [2026/03/17 18:43:25.146] - [INFO] - TPMVersion: TPM-Version:2.0 -Level:0-Revision:1.38-VendorID:'STM '-Firmware:65794.0
+VERBOSE: [2026/03/17 18:43:25.162] - [INFO] - TPM EkPub: AFakeTPMEkPubHere==
+VERBOSE: [2026/03/17 18:43:25.164] - [INFO] - Status: 0x00000000
+VERBOSE: [2026/03/17 18:43:25.164] - [INFO] - OfflineDeviceIdType: TPM_EK
+VERBOSE: [2026/03/17 18:43:25.173] - [INFO] - OfflineDeviceId: AFakeOfflineDeviceIdHere=
+VERBOSE: [2026/03/17 18:43:25.178] - [INFO] - DiskSSNKernel: 0000_0000_0000_0000_0000_0000_0000_0000.|FAKEDISK2 500GB|
+VERBOSE: [2026/03/17 18:43:25.178] - [INFO] - OSDefaultLanguage: en-US
+VERBOSE: [2026/03/17 18:43:25.178] - [INFO] - DefaultSystemLocale: en-US
+VERBOSE: [2026/03/17 18:43:25.178] - [INFO] - OSDefaultTimeZone: Eastern Standard Time
+VERBOSE: [2026/03/17 18:43:25.197] - [INFO] - OSInstalledLanguagePacks: en-US
+VERBOSE: [2026/03/17 18:43:25.197] - [INFO] - KeyboardCode: 0409:00000409
+VERBOSE: [2026/03/17 18:43:25.197] - [INFO] - SppHwid: AFakeSppHwidHere=
+VERBOSE: [2026/03/17 18:43:25.209] - [INFO] - Attempting to build the Autopilot hardware hash CSV object. Please Wait...
+VERBOSE: [2026/03/17 18:43:25.225] - [INFO] - Attempting to build the Autopilot hardware hash CSV content. Please Wait...
+VERBOSE: [2026/03/17 18:43:25.225] - [INFO] - Send Webhook: False
+VERBOSE: [2026/03/17 18:43:25.258] - [INFO] - Script execution of "Invoke-HardwareHashOperation.ps1" ended on Tuesday, March 17, 2026 @ 06:43:25.258 PM
+VERBOSE: [2026/03/17 18:43:25.274] - [INFO] - Script execution took 0 hour(s), 2 minute(s), 36 second(s), and 199 millisecond(s).
+VERBOSE: [2026/03/17 18:43:25.274] - [INFO] - Exiting script "C:\Tools\Invoke-HardwareHashOperation\Invoke-HardwareHashOperation.ps1" with exit code 0.
+**********************
+Windows PowerShell transcript end
+End time: 20260317144325
+**********************

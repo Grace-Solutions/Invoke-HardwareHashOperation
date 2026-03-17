@@ -21,7 +21,10 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
-[Ll]ogs/
+# Logs folder is ignored, but allow the sample log through
+[Ll]og/
+[Ll]ogs/*
+!Logs/Invoke-HardwareHashOperation_20260317.log
 
 # .NET Core
 project.lock.json
@@ -52,3 +55,16 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# Toolkit tool binaries - cannot be redistributed, must be obtained from the Windows ADK
+# See README.md > Required Tools for instructions
+# The negations below override the broad x64/ and x86/ patterns above so that config
+# files and the placeholder in those folders are still tracked by git.
+!Toolkit/Tools/X64/
+!Toolkit/Tools/X64/**
+Toolkit/Tools/X64/*.exe
+Toolkit/Tools/X64/*.dll
+!Toolkit/Tools/X86/
+!Toolkit/Tools/X86/**
+Toolkit/Tools/X86/*.exe
+Toolkit/Tools/X86/*.dll
